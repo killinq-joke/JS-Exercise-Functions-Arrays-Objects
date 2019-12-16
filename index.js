@@ -86,8 +86,12 @@ console.log(getName({ id: 1, name: 'Thalnos', email: 'leia@leia.com' }));
 function makeSmartPerson(nameArg) {
   let obj = {
     name: nameArg,
-    sum: addNumbers(2, 4) ,
-    speak: getName(nameArg),
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function(name) {
+      return "Hello, my name is " + nameArg ;
+    },
   }
   return obj;
 }
@@ -151,8 +155,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
-}
+  return "this is a " + inventory[index].car_make + inventory[index].car_model ;
 
 /**
  * ### Challenge `getLastCarInfo`
