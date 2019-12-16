@@ -278,7 +278,7 @@ function getGermanCars(inventory) {
  const addFive = (num) => {
   return num + 5;
 }// code here!
- const argTimesTwo = () => {
+ const argTimesTwo = (num) => {
   return num * 2;
 } // code here!
 
