@@ -198,10 +198,16 @@ function getCarInfoById(inventory, idNum) {
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
 function sortCarInventory(inventory) {
-  inventory = (inventory.car_make).sort();
-  return inventory;
+  return inventory.sort(function(a, b) {
+    if (a.car_model < b.car_model) {
+      return -1;
+    }
+    if (a.car_mode > b.car_model) {
+      return 1;
+    }
+    return 0;
+  });
 }
-
 
 /**
  * ### Challenge `getModelYears`
@@ -307,9 +313,15 @@ function getGermanCars(inventory) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(/* code here */) {
-  /* code here */
-}
+// function carMaker(num) {
+//   let obj = {
+//     odometer: num,
+//     drive: function(distance) {
+//       num = num + distance;
+//       return odometer;
+//     }
+//   }
+// }
 
 /// ////// END OF CHALLENGE /////////
 /// ////// END OF CHALLENGE /////////
